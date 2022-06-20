@@ -7,7 +7,7 @@ import com.pluralsight.repository.SpeakerRepository;
 import java.util.List;
 
 public class SpeakerService implements ISpeakerService {
-    private SpeakerRepository repository = new HibernateSpeakerRepository();
+    private SpeakerRepository repository;
 
     public SpeakerService() {
     }
