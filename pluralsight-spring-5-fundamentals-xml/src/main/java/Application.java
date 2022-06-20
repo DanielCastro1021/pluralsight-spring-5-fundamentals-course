@@ -1,9 +1,11 @@
-import com.pluralsight.service.ISpeakerService;
 import com.pluralsight.service.SpeakerService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Application {
     public static void main(String[] args) {
-        ISpeakerService service = new SpeakerService();
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        SpeakerService service = context.getBean("speakerService", SpeakerService.class);
         System.out.println(service.findAll().get(0).getFirstName());
     }
 }
