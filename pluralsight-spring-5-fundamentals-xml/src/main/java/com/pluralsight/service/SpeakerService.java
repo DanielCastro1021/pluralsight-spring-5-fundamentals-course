@@ -16,7 +16,7 @@ public class SpeakerService implements ISpeakerService {
         this.repository = repository;
     }
 
-    public void setRepository(SpeakerRepository repository) {
+    public void setSpeakerRepository(SpeakerRepository repository) {
         this.repository = repository;
     }
 
