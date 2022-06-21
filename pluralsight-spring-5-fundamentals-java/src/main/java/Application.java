@@ -7,8 +7,9 @@ public class Application {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         ISpeakerService service = context.getBean("speakerService", ISpeakerService.class);
         ISpeakerService service2 = context.getBean("speakerService", ISpeakerService.class);
-        System.out.println(service);
-        System.out.println(service2);
+        //System.out.println(service);
+        //System.out.println(service2);
         System.out.println(service.findAll().get(0).getFirstName());
+        System.out.println(service.findAll().get(0).getSeedNum());
     }
 }
